@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Painel de Chamada de Senha{% endblock %}
+
+{% block content %}
+<h1>Painel de Chamada de Senha</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Senha</th>
+            <th>Nome</th>
+            <th>Destino</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in pacientes %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nome_completo }}</td>
+            <td>{{ p.destino }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
